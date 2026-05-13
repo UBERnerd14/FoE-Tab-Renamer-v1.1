@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            min-width: 240px;
+            padding: 14px;
+            margin: 0;
+
+            background: linear-gradient(
+                180deg,
+                #2f2f36 0%,
+                #1f1f24 100%
+            );
+
+            color: #f2f2f2;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 14px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        #world {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 14px;
+            color: #ffffff;
+        }
+
+        ul {
+            margin: 0;
+            padding-left: 22px;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        a {
+            color: #7db7ff;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.15s ease;
+        }
+
+        a:hover {
+            color: #b8d8ff;
+            text-decoration: underline;
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.15);
+            margin: 16px 0;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            color: #b0b0b0;
+        }
+
+        .socials {
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            margin-top: 10px;
+        }
+
+        .socials a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 36px;
+            height: 36px;
+
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 10px;
+
+            transition:
+                transform 0.15s ease,
+                background 0.15s ease;
+        }
+
+        .socials a:hover {
+            transform: translateY(-2px);
+            background: rgba(255, 255, 255, 0.16);
+        }
+
+        .socials img {
+            width: 22px;
+            height: 22px;
+        }
+
+	.link-row {
+    		display: flex;
+    		align-items: center;
+    		justify-content: space-between;
+    		gap: 10px;
+	}
+
+	.copy-btn {
+    		width: 18px;
+    		height: 18px;
+    		opacity: 0.75;
+    		cursor: pointer;
+    		transition:
+       			opacity 0.15s ease,
+        		transform 0.15s ease;
+	}
+
+	.copy-btn:hover {
+    		opacity: 1;
+    		transform: scale(1.1);
+	}
+
+	.copy-wrapper {
+    		position: relative;
+    		display: flex;
+    		align-items: center;
+	}
+
+	.copied-popup {
+    		position: absolute;
+    		right: 24px;
+    		top: 50%;
+    		transform: translateY(-50%);
+
+   		background: rgba(0, 0, 0, 0.85);
+    		color: white;
+
+    		font-size: 11px;
+    		padding: 3px 6px;
+    		border-radius: 6px;
+
+    		opacity: 0;
+    		pointer-events: none;
+
+    		transition: opacity 0.2s ease;
+    		white-space: nowrap;
+	}
+
+	.copied-popup.show {
+    		opacity: 1;
+	}
+    </style>
+</head>
+
+<body>
+    <div id="main-content" style="display: none;">
+        <div class="container">
+            <div id="world">Loading...</div>
+
+        <hr>
+        <p style="font-size:14px">Links to world data:</p>
+            <ul>
+                <li class="link-row">
+                    <a id="foestats" target="_blank">ForgeDB</a>
+                    <div class="copy-wrapper">
+                    <span class="copied-popup">Copied!</span>
+                        <img src="icons/copy.svg" class="copy-btn" data-copy="" id="copy-foestats">
+                </div>
+                </li>
+
+                <li class="link-row">
+                    <a id="scoredb" target="_blank">ScoreDB</a>
+                    <div class="copy-wrapper">
+                    <span class="copied-popup">Copied!</span>
+                        <img src="icons/copy.svg" class="copy-btn" data-copy="" id="copy-scoredb">
+                </div>
+
+                </li>
+        </ul>
+
+            <hr>
+
+            <div class="footer">
+                Created by <b>UBERnerd14</b>
+
+                <div class="socials">
+                    <a href="https://www.youtube.com/@UBERnerd14" target="_blank">
+                        <img src="icons/youtube.svg">
+                    </a>
+
+                    <a href="https://www.ubernerd14.com/" target="_blank">
+                        <img src="icons/ubernerd.png">
+                    </a>
+
+                    <a href="https://ubernerd14.com/join" target="_blank">
+                        <img src="icons/discord.svg">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
